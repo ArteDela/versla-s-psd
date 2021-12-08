@@ -1,0 +1,25 @@
+.footer
+{
+	background: #767676;
+	padding: 50px 0;
+	color:white;
+	font-size: 14px;
+	font-weight: 22px;
+	a
+	{
+		color:white;
+		text-decoration: underline;
+	}
+}
+.footer__flex
+{
+	display: flex;
+	justify-content: space-between;
+}
+.footer__flex-block
+{
+	display: flex;
+	justify-content: space-between;
+	flex-basis: 50%;
+	span{display: block;}
+}

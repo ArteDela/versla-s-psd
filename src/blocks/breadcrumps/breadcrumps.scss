@@ -1,0 +1,38 @@
+.breadcrumps
+{
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.breadcrumps__item
+{
+	position: relative;
+	&.active
+	{
+		.breadcrumps__link
+		{
+			text-decoration: underline;
+		}
+	}
+	&:not(:last-child)
+	{
+		margin-right: 22px;
+		&::after
+		{
+			content: '';
+			position: absolute;
+			right: -11px;
+			top: 55%;
+			transform: translateY(-50%) rotate(25deg);
+			width: 1px;
+			height: 11px;
+			background: #767676;
+		}
+	}
+	.breadcrumps__link
+	{
+		font-size: 14px;
+		line-height: 16px;
+		color:#767676;
+	}
+}

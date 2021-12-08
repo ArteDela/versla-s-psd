@@ -1,0 +1,168 @@
+.catalog
+{
+	display: flex;
+	margin-bottom: 200px;
+}
+.catalog__sidebar
+{
+	flex-basis: 18.5%;
+	margin-right: 20px;
+}
+.catalog__sidebar-list
+{
+	margin-bottom: 108px;
+	.catalog__sidebar-item.active
+	{
+		a
+		{
+			text-decoration: underline;
+		}
+	}
+	a
+	{
+		color: #767676;
+		font-size: 18px;
+		line-height: 30px;
+	}
+	.catalog__sidebar-inner-list
+	{
+		padding-left: 15px;
+		.catalog__sidebar-inner-item
+		{
+			position: relative;
+			&:after
+			{
+				content: '';
+				position: absolute;
+				left: -10px;
+				top: 52%;
+				transform: translateY(-50%);
+				border-radius: 50px;
+				width: 4px;
+				height: 4px;
+				background: #767676;
+			}
+			a.catalog__sidebar-inner-link
+			{
+				font-size: 14px;
+				line-height: 14px;
+				text-decoration: none;
+			}
+			&.active
+			{
+				a.catalog__sidebar-inner-link
+				{
+					color:black;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+.catalog__price
+{
+	text-align: center;
+	svg
+	{
+		display: block;
+		width: 97px;
+		height: 111px;
+		margin: 0 auto;
+	}
+	span
+	{
+		display: block;
+		font-size: 30px;
+		font-weight: bold;
+		line-height: 25px;
+		color: #444444;
+	}
+}
+.catalog__content
+{
+	flex-basis: 83%;
+}
+.catalog__content-list
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+	grid-gap:15px;
+	margin-bottom: 32px;
+}
+.catalog__content-item
+{
+	background: #DCDCDC;
+	padding: 20px;
+	img
+	{
+		width: 100%;
+		height: 209px;
+		object-fit: cover;
+		margin-bottom: 21px;
+	}
+	.catalog__content-descr
+	{
+		font-size: 18px;
+		line-height: 18px;
+		color: #767676;
+		margin: 0;
+		margin-bottom: 48px;
+	}
+	.catalog__content-price-block
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.catalog__content-price
+	{
+		font-size: 28px;
+		line-height: 18px;
+		font-weight: bold;
+		color:#444444;
+	}
+	svg
+	{
+		width: 28px;
+		height: 21px;
+	}
+}
+.catalog__content-pagination
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 68px;
+}
+.catalog__content-pagination-item
+{
+	margin: 0 15px;
+	a
+	{
+		font-size: 14px;
+		line-height: 22px;
+		color: #767676;
+	}
+	&.active
+	{
+		a
+		{
+			font-size: 18px;
+			color:#444444;
+		}
+	}
+}
+.catalog__content-text
+{
+	display: flex;
+	padding-top: 30px;
+	justify-content: space-between;
+	border-top:1px solid #444444;
+	p
+	{
+		flex-basis: 45%;
+		font-size: 14px;
+		line-height: 22px;
+		color:#767676;
+	}
+}
